@@ -84,6 +84,8 @@ dependencies:
   shimmer: ^3.0.0
   flutter_animation_progress_bar: ^2.3.1
   web_socket_channel: ^3.0.1
+  rename: ^3.0.2
+  launcher_name: ^1.0.2
 
 flutter_launcher_icons:
   android: "launcher_icon"
