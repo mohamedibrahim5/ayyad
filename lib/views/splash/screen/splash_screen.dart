@@ -22,7 +22,6 @@ class SplashScreen extends StatefulWidget {
 class _SplashScreenState extends State<SplashScreen> {
   late final SocketCubit socketCubit;
   late bool showOnBoarding;
-  bool showLogo = false ;
   @override
   Widget build(BuildContext context) {
     return BlocConsumer<SplashCubit,SplashState>(
@@ -59,12 +58,7 @@ class _SplashScreenState extends State<SplashScreen> {
     }
 
 
-    Future.delayed(const Duration(seconds: 2), () {
-      setState(() {
-        showLogo = true;
-      });
-    });
-    Future.delayed(const Duration(seconds: 5), () {
+    Future.delayed(const Duration(seconds: 7), () {
       if(sl<PrefsHelper>().getOrganizationId() == 0){
         getOrganization();
       }else {

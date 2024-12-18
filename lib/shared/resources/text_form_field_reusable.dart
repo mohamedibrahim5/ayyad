@@ -5,6 +5,8 @@ import '../../views/app_root/dark_mode_cubit/dark_mode_cubit.dart';
 import 'colors_manager.dart';
 import 'package:flutter/material.dart';
 
+import 'constant.dart';
+
 
 class CustomFormField extends StatefulWidget {
   final TextEditingController controller;
@@ -115,7 +117,7 @@ class CustomFieldState extends State<CustomFormField> {
                   SizedBox(
                     width: 8.w,
                   ),
-                  Image.asset('assets/flags/eg.png',package: 'intl_phone_field',matchTextDirection: true,width: 24.w,height: 24.h,),
+                  Image.asset('${Constants.selectedCountry.flag}',package: 'intl_phone_field',matchTextDirection: true,width: 24.w,height: 24.h,),
                   Padding(
                     padding:  REdgeInsets.symmetric(
                         horizontal: 9
@@ -127,7 +129,7 @@ class CustomFieldState extends State<CustomFormField> {
                     ),
                   ),
                   Text(
-                    "+20",
+                    "${Constants.selectedCountry.dialCode}",
                     style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                         fontSize: 14.sp,
                         fontWeight: FontWeight.w400
