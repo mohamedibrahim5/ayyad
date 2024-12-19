@@ -34,7 +34,7 @@ class _AppRootState extends State<AppRoot> {
             return MaterialApp(
               theme: AppTheme.lightTheme,
               darkTheme: AppTheme.darkTheme,
-              title: "اسماك ابن البحر",
+              title: "Rosto",
               locale: context.locale,
               navigatorKey: sl<NavigationService>().navigatorKey,
               supportedLocales: context.supportedLocales,

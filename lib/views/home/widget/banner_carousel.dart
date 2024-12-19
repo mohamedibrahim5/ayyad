@@ -44,7 +44,7 @@ class _CustomBannerCarouselState extends State<CustomBannerCarousel> {
               animateToClosest: false,
               viewportFraction:1,
               initialPage: 0,
-              enableInfiniteScroll: false,
+              enableInfiniteScroll: true,
               reverse: false,
               autoPlay: true,
               autoPlayInterval: const Duration(seconds: 3),

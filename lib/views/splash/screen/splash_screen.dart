@@ -58,7 +58,7 @@ class _SplashScreenState extends State<SplashScreen> {
     }
 
 
-    Future.delayed(const Duration(seconds: 7), () {
+    Future.delayed(const Duration(seconds: 4), () {
       if(sl<PrefsHelper>().getOrganizationId() == 0){
         getOrganization();
       }else {
@@ -73,7 +73,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
   getOrganization(){
     SplashCubit.get(context).getOrganization(
-      domain: 'IbnElBahr',
+      domain: 'Rosto',
     );
   }
   trackOrder(){

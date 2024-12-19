@@ -54,7 +54,7 @@ class AssetsManager {
   static const String menu = 'assets/images/menu.svg';
 
   // first her
-  static const String logo = 'assets/images/logo.jpg';
+  static const String logo = 'assets/images/logo.png';
   static const String logo1 = 'assets/images/logo1.png';
   static const String logo2 = 'assets/images/logo2.png';
   static const String firstBackground = 'assets/images/firstBackground.png';

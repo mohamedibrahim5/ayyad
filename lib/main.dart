@@ -21,6 +21,8 @@ import 'package:ibnelbarh/views/splash/cubit/splash_cubit.dart';
 
 import 'model/hive_type/profile_hive.dart';
 import 'model/requests/add_my_address_request.dart';
+import 'dart:io';
+
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
