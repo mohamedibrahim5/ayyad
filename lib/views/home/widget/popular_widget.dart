@@ -62,7 +62,7 @@ class _PopularWidgetState extends State<PopularWidget> {
 
                 HomeCubit.get(context).productNewest!.isEmpty ? const SizedBox() :
                 SizedBox(
-                  height: 184.h,
+                  height: 155.h,
                   child: ListView.separated(
                     controller: scrollControllerNewestProduct,
                       scrollDirection: Axis.horizontal,
@@ -114,58 +114,60 @@ class _PopularWidgetState extends State<PopularWidget> {
                             ),
                             child: Padding(
                               padding:  REdgeInsets.all(10.0),
-                              child: Column(
-                                mainAxisAlignment: MainAxisAlignment.start,
-                                crossAxisAlignment: CrossAxisAlignment.start,
-                                children: [
-                                  ImageCard(imageUrl:HomeCubit.get(context).productNewest![index].image!,width: 128.w,height: 80.h,boxFit: BoxFit.cover,),
-                                  SizedBox(
-                                    height: 8.h,
-                                  ),
-                                  Row(
-                                    mainAxisAlignment: MainAxisAlignment.end,
-                                    children: [
-                                      SizedBox(
-                                        width: 95.w,
-                                        child: Text(
-                                          HomeCubit.get(context).productNewest![index].title!,
-                                          style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                                              fontSize: 12.sp,
-                                              fontWeight: FontWeight.w500,
-                                              overflow: TextOverflow.ellipsis
-                                          ),
-                                          maxLines: 1,
-                                        ),
-                                      ),
-
-                                          Text(
-                                      "${StringsManager.priceOfProduct.tr()}${HomeCubit.get(context).productNewest![index].price!}",
-                                            style: Theme.of(context).textTheme.displaySmall!.copyWith(
-                                              color: ColorsManager.primaryColor,
-                                            ),
-                                          ),
-
-                                    ],
-                                  ),
-                                  SizedBox(
-                                    height: 4.h,
-                                  ),
-                                  SizedBox(
-                                    width: 128.w,
-                                    height: 40.h,
-                                    child: Text(
-                                      HomeCubit.get(context).productNewest![index].description!,
-                                      style: Theme.of(context).textTheme.bodySmall!.copyWith(
-                                          fontSize: 10.sp,
-                                          fontWeight: FontWeight.w500,
-                                          color:const Color(0xffBABABA) ,
-                                          overflow: TextOverflow.ellipsis
-                                      ),
-                                      maxLines: 2,
+                              child: Center(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.start,
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    ImageCard(imageUrl:HomeCubit.get(context).productNewest![index].image!,width: 128.w,height: 80.h,boxFit: BoxFit.fill,),
+                                    SizedBox(
+                                      height: 8.h,
                                     ),
-                                  ),
+                                    Row(
+                                      mainAxisAlignment: MainAxisAlignment.end,
+                                      children: [
+                                        SizedBox(
+                                          width: 95.w,
+                                          child: Text(
+                                            HomeCubit.get(context).productNewest![index].title!,
+                                            style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                                                fontSize: 12.sp,
+                                                fontWeight: FontWeight.w500,
+                                                overflow: TextOverflow.ellipsis
+                                            ),
+                                            maxLines: 1,
+                                          ),
+                                        ),
 
-                                ],
+                                        Text(
+                                          "${HomeCubit.get(context).productNewest![index].price ?? 0}${StringsManager.priceOfProduct.tr()}",
+                                          style: Theme.of(context).textTheme.displaySmall!.copyWith(
+                                            color: ColorsManager.primaryColor,
+                                          ),
+                                        ),
+
+                                      ],
+                                    ),
+                                    SizedBox(
+                                      height: 4.h,
+                                    ),
+                                    SizedBox(
+                                      width: 128.w,
+                                      height: 20.h,
+                                      child:  Text(
+                                        HomeCubit.get(context).productNewest![index].description ?? '',
+                                        style: Theme.of(context).textTheme.bodySmall!.copyWith(
+                                            fontSize: 10.sp,
+                                            fontWeight: FontWeight.w500,
+                                            color:const Color(0xffBABABA) ,
+                                            overflow: TextOverflow.ellipsis
+                                        ),
+                                        maxLines: 1,
+                                      ),
+                                    ),
+
+                                  ],
+                                ),
                               ),
                             ),
                           ),
@@ -335,7 +337,7 @@ class _PopularWidgetState extends State<PopularWidget> {
 
                 HomeCubit.get(context).productBestSeller!.isEmpty ? const SizedBox() :
                 SizedBox(
-                  height: 184.h,
+                  height: 155.h,
                   child: ListView.separated(
                     controller: scrollControllerBestSellerProduct,
                       scrollDirection: Axis.horizontal,
@@ -389,7 +391,7 @@ class _PopularWidgetState extends State<PopularWidget> {
                                 mainAxisAlignment: MainAxisAlignment.start,
                                 crossAxisAlignment: CrossAxisAlignment.start,
                                 children: [
-                                  ImageCard(imageUrl:HomeCubit.get(context).productBestSeller![index].image!,width: 128.w,height: 80.h,boxFit: BoxFit.cover,),
+                                  ImageCard(imageUrl:HomeCubit.get(context).productBestSeller![index].image!,width: 128.w,height: 80.h,boxFit: BoxFit.fill,),
 
                                   // Image.asset(AssetsManager.popularImage,height:113.h ,width: 89.w,matchTextDirection: true,),
                                   SizedBox(
@@ -412,7 +414,7 @@ class _PopularWidgetState extends State<PopularWidget> {
                                         ),
                                       ),
                                       Text(
-                                        "${StringsManager.priceOfProduct.tr()}${HomeCubit.get(context).productBestSeller![index].price ?? 0}",
+                                        "${HomeCubit.get(context).productBestSeller![index].price ?? 0}${StringsManager.priceOfProduct.tr()}",
                                         style: Theme.of(context).textTheme.displaySmall!.copyWith(
                                           color: ColorsManager.primaryColor,
                                         ),
@@ -424,16 +426,16 @@ class _PopularWidgetState extends State<PopularWidget> {
                                   ),
                                   SizedBox(
                                     width: 128.w,
-                                    height: 40.h,
+                                    height: 20.h,
                                     child: Text(
-                                      HomeCubit.get(context).productBestSeller![index].description!,
+                                      HomeCubit.get(context).productBestSeller![index].description ?? '',
                                       style: Theme.of(context).textTheme.bodySmall!.copyWith(
                                           fontSize: 10.sp,
                                           fontWeight: FontWeight.w500,
                                           color:const Color(0xffBABABA) ,
                                           overflow: TextOverflow.ellipsis
                                       ),
-                                      maxLines: 2,
+                                      maxLines: 1,
                                     ),
                                   ),
                                 ],
