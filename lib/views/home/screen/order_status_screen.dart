@@ -506,7 +506,7 @@ class _OrderStatusScreenState extends State<OrderStatusScreen> {
                                 ),
                               ),
                               Text(
-                                '${StringsManager.priceOfProduct.tr()} ${OrderStatusCubit.get(context).trackOrderModelResponse!.data!.getOrderResponse!.totalAmount ?? ''}',
+                                ' ${OrderStatusCubit.get(context).trackOrderModelResponse!.data!.getOrderResponse!.totalAmount ?? ''}${StringsManager.priceOfProduct.tr()}  ',
                                 style:!ThemeCubit.get(context).isDark ? Theme.of(context).textTheme.displaySmall!.copyWith(
                                   fontWeight: FontWeight.w600,
                                 ) : Theme.of(context).textTheme.bodySmall!.copyWith(

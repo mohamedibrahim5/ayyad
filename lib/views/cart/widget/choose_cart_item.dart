@@ -85,7 +85,7 @@ class _ChooseCartItemState extends State<ChooseCartItem> {
                 ),)
               ],
             ),
-            Text(widget.extras.price != null ? '(${StringsManager.priceOfProduct.tr()}${widget.extras.price})' :  '',style: Theme.of(context).textTheme.displaySmall!.copyWith(
+            Text(widget.extras.price != null ? '( ${widget.extras.price}${StringsManager.priceOfProduct.tr()})' :  '',style: Theme.of(context).textTheme.displaySmall!.copyWith(
                 fontSize: 14.sp,
                 fontWeight: FontWeight.w400
             ),)

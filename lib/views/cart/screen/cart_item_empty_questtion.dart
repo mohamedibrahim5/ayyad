@@ -431,7 +431,7 @@ class _CartItemEmptyQuesttionState extends State<CartItemEmptyQuesttion> {
 
                           //    }
                         } ,
-                        title2:widget.cartItem.questions!.isEmpty ? '${StringsManager.priceOfProduct.tr()} ${widget.cartItem.price}' :  '${StringsManager.priceOfProduct.tr()} ${CartCubit.get(context).totalPrice * countNumber}',
+                        title2:  ' ${double.parse(widget.cartItem.price) * countNumber} ${StringsManager.priceOfProduct.tr()} ',
                         isOneTitle: false,
                       ),
                     ],

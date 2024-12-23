@@ -174,7 +174,7 @@ class _NewNonPopularState extends State<NewNonPopular> {
                                             mainAxisAlignment: MainAxisAlignment.start,
                                             children: [
                                               Text(
-                                                '${StringsManager.priceOfProduct.tr()}${HomeCubit.get(context).productNonPopular![index].price!}',
+                                                '${HomeCubit.get(context).productNonPopular![index].price ?? '0'}${StringsManager.priceOfProduct.tr()}',
                                                 style: Theme.of(context).textTheme.displaySmall!.copyWith(
                                                   color:HomeCubit.get(context).productNonPopular![index].oldPrice == null || HomeCubit.get(context).productNonPopular![index].oldPrice?.toDouble() == 0 ? null : HomeCubit.get(context).productNonPopular![index].price!.toDouble() == HomeCubit.get(context).productNonPopular![index].oldPrice?.toDouble()  ? null : ColorsManager.primaryColor,
                                                 ),
@@ -186,7 +186,7 @@ class _NewNonPopularState extends State<NewNonPopular> {
                                                         horizontal: 8
                                                     ),
                                                     child: Text(
-                                                      '${StringsManager.priceOfProduct.tr()}${HomeCubit.get(context).productNonPopular![index].oldPrice!}',
+                                                      '${HomeCubit.get(context).productNonPopular![index].oldPrice ?? '0'}${StringsManager.priceOfProduct.tr()}',
                                                       style: Theme.of(context).textTheme.displaySmall!.copyWith(
                                                         decoration: TextDecoration.lineThrough,
                                                         color: const Color(0xffA3A3A3),

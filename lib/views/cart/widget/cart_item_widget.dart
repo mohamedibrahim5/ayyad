@@ -144,7 +144,7 @@ class _CartItemWidgetState extends State<CartItemWidget> {
                               left: context.locale.languageCode == 'en' ?  0 : 4
                           ),
                           child: Text(
-                            '${StringsManager.priceOfProduct.tr()}${(totalPrice * widget.items!.quantity!).toStringAsFixed(2)}',
+                            '${(totalPrice * widget.items!.quantity!).toStringAsFixed(2)}${StringsManager.priceOfProduct.tr()}',
                             style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                               fontWeight: FontWeight.w500,
                               fontSize: 12.sp

@@ -719,7 +719,7 @@ class _CartItemUpdateScreenState extends State<CartItemUpdateScreen> {
                              Utils.showSnackBar(StringsManager.noChange.tr(),context);
                            }
                         } ,
-                        title2: '${StringsManager.priceOfProduct.tr()} ${CartCubit.get(context).totalPriceCart * countNumber}',
+                        title2: '       ${CartCubit.get(context).totalPriceCart * countNumber} ${StringsManager.priceOfProduct.tr()}',
                         isOneTitle: false,
                       ),
                     ],

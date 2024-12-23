@@ -73,7 +73,7 @@ class _SplashScreenState extends State<SplashScreen> {
   }
   getOrganization(){
     SplashCubit.get(context).getOrganization(
-      domain: 'Rosto',
+      domain: 'Shawaerma Crepe',
     );
   }
   trackOrder(){

@@ -796,7 +796,7 @@ class _CartItemScreenState extends State<CartItemScreen> {
 
                       //    }
                         } ,
-                      title2:cartItem.questions!.isEmpty ? '${StringsManager.priceOfProduct.tr()} ${cartItem.price}' :  '${StringsManager.priceOfProduct.tr()} ${CartCubit.get(context).totalPrice * countNumber}',
+                      title2:cartItem.questions!.isEmpty ? '${cartItem.price} ${StringsManager.priceOfProduct.tr()} ' :  ' ${CartCubit.get(context).totalPrice * countNumber} ${StringsManager.priceOfProduct.tr()} ',
                         isOneTitle: false,
                       ),
                     ],

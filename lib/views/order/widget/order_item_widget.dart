@@ -167,7 +167,7 @@ class _OrderItemWidgetState extends State<OrderItemWidget> {
                         ],
                       ),
                     ),
-                    Text('${StringsManager.priceOfProduct.tr()}${widget.order.totalAmount}',style: Theme.of(context).textTheme.displaySmall!.copyWith(
+                    Text('${widget.order.totalAmount}${StringsManager.priceOfProduct.tr()}',style: Theme.of(context).textTheme.displaySmall!.copyWith(
                       color:!ThemeCubit.get(context).isDark ? null :ColorsManager.blackColor2DarkMode
                     )),
 
@@ -215,7 +215,7 @@ class _OrderItemWidgetState extends State<OrderItemWidget> {
                               )
                             ],
                           ),
-                          Text('${StringsManager.priceOfProduct.tr()}${widget.order.items?[index].price}',style: Theme.of(context).textTheme.displaySmall!.copyWith(
+                          Text('${widget.order.items?[index].price}${StringsManager.priceOfProduct.tr()}',style: Theme.of(context).textTheme.displaySmall!.copyWith(
                       color:!ThemeCubit.get(context).isDark ? null :ColorsManager.blackColor2DarkMode
                     ).copyWith(
                             fontSize: 10.sp

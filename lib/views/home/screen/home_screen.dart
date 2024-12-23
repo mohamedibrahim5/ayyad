@@ -670,7 +670,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               },
                               separatorBuilder: (context,index){
                               return SizedBox(
-                                width: 2.w,
+                                width: 4.w,
                               );
                               },
                               itemCount: HomeCubit.get(context)

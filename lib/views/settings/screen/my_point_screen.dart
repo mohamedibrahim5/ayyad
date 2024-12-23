@@ -128,7 +128,7 @@ class _MyPointScreenState extends State<MyPointScreen> {
                               height: 4.h,
                             ),
                             Text(
-                              '${StringsManager.priceOfProduct.tr()} ${HomeCubit.get(context).getProfileResponse?.cashback ?? 0}',
+                              ' ${HomeCubit.get(context).getProfileResponse?.cashback ?? 0}${StringsManager.priceOfProduct.tr()}',
                               style: Theme.of(context).textTheme.displaySmall!.copyWith(
                                   fontWeight: FontWeight.w400,
                                   fontSize: 14.sp

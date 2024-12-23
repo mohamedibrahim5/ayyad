@@ -54,7 +54,7 @@ class PaymentDetailsWidget extends StatelessWidget {
                   style: Theme.of(context).textTheme.headlineLarge,
                 ),
                 Text(
-                  '${StringsManager.priceOfProduct.tr()}$totalAmount',
+                  ' $totalAmount${StringsManager.priceOfProduct.tr()}',
                   style: Theme.of(context).textTheme.headlineLarge,
                 ),
               ],
@@ -75,7 +75,7 @@ class PaymentDetailsWidget extends StatelessWidget {
                   ),
                 ),
                 Text(
-                  '${StringsManager.priceOfProduct.tr()}$deliveryFee',
+                  ' $deliveryFee${StringsManager.priceOfProduct.tr()}',
                   style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                       fontWeight: FontWeight.w500,
                       fontSize: 12.sp,
@@ -96,7 +96,7 @@ class PaymentDetailsWidget extends StatelessWidget {
                   style: Theme.of(context).textTheme.headlineLarge,
                 ),
                 Text(
-                  '${StringsManager.priceOfProduct.tr()}$servesFees',
+                  ' $servesFees${StringsManager.priceOfProduct.tr()}',
                   style: Theme.of(context).textTheme.headlineLarge,
                 ),
               ],
@@ -122,7 +122,7 @@ class PaymentDetailsWidget extends StatelessWidget {
                   style: Theme.of(context).textTheme.displaySmall,
                 ),
                 Text(
-                  '${StringsManager.priceOfProduct.tr()}${totalAmount - deliveryFee}',
+                  ' ${totalAmount - deliveryFee}${StringsManager.priceOfProduct.tr()}',
                   style: Theme.of(context).textTheme.displaySmall,
                 ),
               ],

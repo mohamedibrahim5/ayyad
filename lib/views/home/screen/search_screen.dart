@@ -206,7 +206,7 @@ class _SearchScreenState extends State<SearchScreen> {
                                               ),
                                             ),
                                             Text(
-                                              '${StringsManager.priceOfProduct.tr()}${HomeCubit.get(context).productSearch![index].price ?? 0}',
+                                              ' ${HomeCubit.get(context).productSearch![index].price ?? 0}${StringsManager.priceOfProduct.tr()}',
                                               style: Theme.of(context).textTheme.bodyLarge!.copyWith(
                                                   fontWeight: FontWeight.w500,
                                                   fontSize: 12.sp,
